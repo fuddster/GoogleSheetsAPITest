@@ -147,10 +147,12 @@
         const body = {
           values: values,
         };
+        let nextRow = range.values.length + 1
+        let range = "A"+str(nextRow)
         try {
           gapi.client.sheets.spreadsheets.values.append({
             spreadsheetId: '1LlN9kxZSRFmXeIH-TcC8fHdytrqVF9JXYM_TJqWvAJc',
-            //range: range,
+            range: range,
             valueInputOption: "RAW",
             resource: body,
           }).then((response) => {
