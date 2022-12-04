@@ -151,7 +151,7 @@
           gapi.client.sheets.spreadsheets.values.append({
             spreadsheetId: '1LlN9kxZSRFmXeIH-TcC8fHdytrqVF9JXYM_TJqWvAJc',
             //range: range,
-            valueInputOption: RAW,
+            valueInputOption: "RAW",
             resource: body,
           }).then((response) => {
             const result = response.result;
